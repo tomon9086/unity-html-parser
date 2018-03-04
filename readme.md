@@ -1,4 +1,4 @@
-# HTML parser for Unity ( [Moosan](https://github.com/Moosan) )
+# HTML parser for [Moosan](https://github.com/Moosan)
 
 ## Usage
 

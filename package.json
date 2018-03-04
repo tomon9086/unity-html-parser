@@ -1,6 +1,13 @@
 {
   "dependencies": {
     "jsdom": "^11.6.2",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-logger": "^3.1.0",
+    "koa-route": "^3.2.0",
     "puppeteer": "^1.1.1"
+  },
+  "scripts": {
+  	"serve": "node index.js"
   }
 }
