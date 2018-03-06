@@ -42,12 +42,18 @@ function getHierarchy(url) {
 	if(!url || !url.match(regex_url)) return
 	return new Promise(async (resolve, reject) => {
 		const constructHierarchy = (nodeList) => {
-			const children = {}
+			let children = ""
 			Array.prototype.forEach.call(nodeList, (v, i) => {
 				if(v.tagName) {
-					children[`${ i }_${ v.tagName }`] = constructHierarchy(v.childNodes)
+					children += 
+						`<${ v.tagName } index="${ i }">
+							${ constructHierarchy(v.childNodes) }
+						</${ v.tagName }>`
 				} else {
-					children[`${ i }_${ v.nodeName }`] = v.data
+					children +=
+						`<${ v.nodeName } index="${ i }">
+							${ v.data }
+						</${ v.nodeName }>`
 				}
 			})
 			return children

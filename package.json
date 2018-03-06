@@ -8,6 +8,6 @@
     "puppeteer": "^1.1.1"
   },
   "scripts": {
-  	"serve": "node index.js"
+    "serve": "node index.js"
   }
 }
