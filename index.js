@@ -54,9 +54,9 @@ function getHierarchy(url) {
 						</${ v.tagName }>`
 				} else {
 					children +=
-						`<data type="${ v.nodeName }" index="${ i }">
+						`<DATA type="${ v.nodeName }" index="${ i }">
 							${ escapeChar(v.data) }
-						</data>`
+						</DATA>`
 				}
 			})
 			return children
